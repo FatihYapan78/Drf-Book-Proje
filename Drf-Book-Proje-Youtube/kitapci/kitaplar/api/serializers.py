@@ -2,6 +2,7 @@ from rest_framework import serializers
 from kitaplar.models import *
 
 class YorumSerializer(serializers.ModelSerializer):
+    yorumcu = serializers.StringRelatedField(read_only=True)
     class Meta: 
         model = Yorum
         # fields = "__all__"
